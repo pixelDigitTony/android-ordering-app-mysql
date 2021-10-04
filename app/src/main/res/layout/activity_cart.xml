@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:padding="16dp"
+    tools:context=".Cart">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/listCart"
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/cart_dec"
+        ></android.support.v7.widget.RecyclerView>
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cart_dec"
+        android:layout_alignParentBottom="true"
+        app:cardBackgroundColor="@color/colorAccentTrans"
+        android:layout_width="match_parent"
+        android:layout_height="125dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="8dp"
+                android:layout_width="100dp"
+                android:layout_height="50dp">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:theme="@style/AppTheme"
+                    android:id="@+id/clear_items"
+                    android:text="Clear"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_alignParentTop="true"
+                android:layout_margin="8dp"
+                android:layout_alignParentLeft="true"
+                android:layout_width="100dp"
+                android:layout_height="50dp">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/head_back"
+                    android:theme="@style/AppTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Back"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="10dp"
+                >
+                
+                <TextView
+                    android:text="Total: "
+                    android:textSize="20sp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="₱ "
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/total"
+                    android:text="0.0"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btnPlaceOrder"
+                android:theme="@style/AppTheme"
+                android:text="Place Order"
+                android:textColor="@android:color/black"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_alignParentEnd="true"
+                android:shadowColor="@color/colorPrimaryDark"
+                />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
